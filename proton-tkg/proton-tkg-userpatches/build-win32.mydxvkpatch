@@ -1,0 +1,13 @@
+diff --git a/build-win32.txt b/build-win32.txt
+--- a/build-win32.txt
++++ b/build-win32.txt
+@@ -13,3 +13,9 @@ system = 'windows'
+ cpu_family = 'x86'
+ cpu = 'x86'
+ endian = 'little'
++
++[built-in options]
++c_args=['-O3', '-pipe','-fno-semantic-interposition', '-fipa-pta', '-fdevirtualize-at-ltrans']
++cpp_args=['-static', '-static-libgcc', '-O3', '-pipe', '-fno-semantic-interposition', '-fdevirtualize-at-ltrans']
++c_link_args = ['-static', '-static-libgcc', '-O3', '-pipe', '-fno-semantic-interposition', '-fipa-pta', '-fdevirtualize-at-ltrans']
++
